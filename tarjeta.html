@@ -6,9 +6,10 @@
     <title>Tarjeta de Presentación</title>
     <style>
         body {
+            /* Fondo difuminado rosado y lila */
             background: rgb(255,64,209);
             background: radial-gradient(circle, rgba(255,64,209,1) 0%, rgba(216,148,233,1) 100%);
-            display: flex;
+            display: flex; /* Flexbox para centrar la tarjeta en pantalla */
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -16,12 +17,13 @@
             align-items: center;
         }
 
+        /* Estilo para la tarjeta */
         .tarjeta{
             background-color: white;
             border-radius: 15px;
-            padding: 2rem;
+            padding: 2rem; /* Espaciado interno */
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            position: relative;
+            position: relative; /* Para posicionar la imagen encima */
             width: 300px;
             text-align: center;
         }
@@ -35,20 +37,21 @@
         .imagen-perfil {
             width: 100px;
             height: 100px;
-            object-fit: cover;
+            object-fit: cover; /* Para que no se distorsione */
             border-radius: 50%;
             position: absolute;
-            top: -30px;
+            top: -30px; /* Flotando sobre la tarjeta */
             right: -15px;
             border: 2px solid white;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
+        /* Botón en la parte inferior de la pantalla */
         .boton-leer {
             position: fixed;
             bottom: 20px;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%); /* Centrado horizontal */
             background-color: #b322df;
             color: white;
             border: none;
@@ -56,24 +59,27 @@
             font-size: 1rem;
             border-radius: 25px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Animación*/
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
- 
+
+        /* Efecto hover del botón */
         .boton-leer:hover {
             background-color: #d052e0;
-            transform: translateX(-50%) scale(1.05);
+            transform: translateX(-50%) scale(1.05); /*Hacer el botón más grande*/
         }
 
     </style>
 </head>
 <body>
+    <!-- Contenedor de la tarjeta -->
     <div class="tarjeta">
         <h2>Vanellope</h3>
         <p>Personaje de Ralph el Demoledor</p>
         <img class="imagen-perfil" src="img/vane.png" alt="Vanellope">
     </div>
 
+    <!-- Botón fijo al final -->
     <button class="boton-leer">Leer Más</button>
 </body>
 </html>

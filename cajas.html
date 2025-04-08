@@ -7,26 +7,29 @@
 
     <style>
 
+    /* Fondo difuminadi rosado y azul */
     body{
         background: rgb(238,174,202);
         background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
         }
 
+    /* Contenedor donde están dos de las cajas */
     .contenedor {
       width: 500px;
       height: 500px;
-      position: relative;
+      position: relative; /* Para posicionar las cajas de forma absoluta dentro de él */
       border: 2px solid black;
-      margin: 50px auto;
+      margin: 50px auto; /* Centrado horizontal */
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
     }
 
+    /* Estilo general para todas las cajas */
     .caja {
       width: 100px;
       height: 100px;
       color: white;
-      display: flex;
+      display: flex; /* Para centrar texto */
       align-items: center;
       justify-content: center;
       font-family: Arial, sans-serif;
@@ -37,11 +40,13 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    /* Efecto al pasar el cursor por encima */
     .caja:hover {
-      transform: scale(1.05);
-      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05); /* Aumenta el tamaño */
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); /* Aumenta sombra */
     }
 
+    /*Estilo Caja 1*/
         .caja1 {
             background-color: blue;
             position: absolute;
@@ -49,27 +54,30 @@
             left: 20px;
         }
 
+    /*Estilo Caja 2*/
         .caja2 {
             background-color: rgb(190, 68, 206);
             position: absolute;
             bottom: 20px;
             right: 20px;
         }
-
+    /*Estilo Caja 3*/
         .caja3 {
             background-color: rgb(174, 201, 19);
-            position: fixed;
+            position: fixed; /* Se mantiene en esa posición aunque se haga scroll */
             top: 0;
             right: 0;
         }
     </style>
 </head>
 <body>
+    <!-- Contenedor con dos cajas posicionadas dentro -->
     <div class="contenedor">
         <div class="caja caja1">Caja 1</div>
         <div class="caja caja2">Caja 2</div>
     </div>
 
+    <!-- Caja 3 fuera del contenedor y fijada en la pantalla -->
     <div class="caja caja3">Caja 3</div>
 </body>
 </html> 
