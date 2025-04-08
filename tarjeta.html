@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Presentación</title>
+    <style>
+        body {
+            background: rgb(255,64,209);
+            background: radial-gradient(circle, rgba(255,64,209,1) 0%, rgba(216,148,233,1) 100%);
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tarjeta{
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 300px;
+            text-align: center;
+        }
+
+        .tarjeta h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .imagen-perfil {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: -30px;
+            right: -15px;
+            border: 2px solid white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .boton-leer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #b322df;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+ 
+        .boton-leer:hover {
+            background-color: #d052e0;
+            transform: translateX(-50%) scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tarjeta">
+        <h2>Vanellope</h3>
+        <p>Personaje de Ralph el Demoledor</p>
+        <img class="imagen-perfil" src="img/vane.png" alt="Vanellope">
+    </div>
+
+    <button class="boton-leer">Leer Más</button>
+</body>
+</html>
